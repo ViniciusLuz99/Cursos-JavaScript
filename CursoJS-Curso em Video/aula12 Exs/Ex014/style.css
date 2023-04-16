@@ -17,9 +17,14 @@ section {
   box-shadow: 5px 5px 10px rgba(50, 4, 65, 0.281);
 }
 
-#imagem img {
+div{
+  text-align: center;
+  padding: 8px;
+}
+
+#foto img {
   clip-path: circle();
-  max-width: 250px;
+  max-width: 350px;
 }
 
 footer {
