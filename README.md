@@ -15,8 +15,8 @@ O curso de JavaScript do FreeCodeCamp é um curso online e gratuito que ensina a
 
 ### ✅Projetos para Certificado⬇️:
 #### JavaScript Algorithms and Data Structures
-- [Palindrome Checker Certification Project](https://your-username.github.io/palindrome-checker/)
-- [Roman Numeral Converter Certification Project](https://your-username.github.io/roman-numeral-converter/)
-- [Caesars Cipher Certification Project](https://your-username.github.io/caesars-cipher/)
-- [Telephone Number Validator Certification Project](https://your-username.github.io/telephone-number-validator/)
-- [Cash Register Certification Project](https://your-username.github.io/cash-register/)
+- [Palindrome Checker Certification Project#️⃣](https://your-username.github.io/palindrome-checker/)
+- [Roman Numeral Converter Certification Project#️⃣](https://your-username.github.io/roman-numeral-converter/)
+- [Caesars Cipher Certification Project#️⃣](https://your-username.github.io/caesars-cipher/)
+- [Telephone Number Validator Certification Project#️⃣](https://your-username.github.io/telephone-number-validator/)
+- [Cash Register Certification Project#️⃣](https://your-username.github.io/cash-register/)
