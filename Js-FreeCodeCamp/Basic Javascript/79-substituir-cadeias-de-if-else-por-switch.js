@@ -36,29 +36,28 @@ function chainToSwitch(val) {
   // } else if (val === 7) {
   //   answer = "Ate Nine";
   // }
- 
- switch (val) {
-   case "bob":
-    return "Marley";
-    break;
 
-   case 42:
-    return "The Answer";
-    break;
+  switch (val) {
+    case "bob":
+      return "Marley";
+      break;
 
-   case 1: 
-    return "There is no #1";
-    break;
+    case 42:
+      return "The Answer";
+      break;
 
-   case 99:
-   return "Missed me by this much!";
-   break;
+    case 1:
+      return "There is no #1";
+      break;
 
-   case 7:
-   return "Ate Nine";
-   break;
- }
+    case 99:
+      return "Missed me by this much!";
+      break;
 
+    case 7:
+      return "Ate Nine";
+      break;
+  }
 
   // Altere apenas o código acima desta linha
   return answer;
