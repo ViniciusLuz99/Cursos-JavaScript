@@ -21,9 +21,9 @@ Defina a variável playerNumber para ser 16. Então, use a variável para procur
 const testObj = {
   12: "Namath",
   16: "Montana",
-  19: "Unitas"
+  19: "Unitas",
 };
 
 // Altere apenas o código abaixo desta linha
-const playerNumber = 16;  // Altere esta linha
-const player = testObj[playerNumber];   // Altere esta linha
+const playerNumber = 16; // Altere esta linha
+const player = testObj[playerNumber]; // Altere esta linha
