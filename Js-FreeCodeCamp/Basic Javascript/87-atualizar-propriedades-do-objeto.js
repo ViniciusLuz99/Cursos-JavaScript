@@ -16,10 +16,10 @@ Atualize a propriedade name do objeto myDog. Vamos alterar o valor da propriedad
 */
 // Configuração
 const myDog = {
-  "name": "Coder",
-  "legs": 4,
-  "tails": 1,
-  "friends": ["freeCodeCamp Campers"]
+  name: "Coder",
+  legs: 4,
+  tails: 1,
+  friends: ["freeCodeCamp Campers"],
 };
 
 // Altere apenas o código abaixo desta linha
