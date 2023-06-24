@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Js</title>
+    <!-- Link para o Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <style>
       * {
         box-sizing: border-box;
@@ -12,9 +17,9 @@
       }
       body {
         background-color: #222;
-        color: #fff;
+        color: #e0e0e0;
         font-family: Arial, sans-serif;
-        padding: 20px;
+        padding: 10px;
         width: 100%;
       }
 
@@ -26,50 +31,128 @@
         margin-bottom: 30px;
       }
 
-      h2 {
+      h2,
+      summary {
+        font-size: 1.3em;
         margin-top: 40px;
         padding: 10px;
+        list-style: none;
       }
 
       p {
+        font-size: 1em;
         line-height: 1.5;
         padding: 5px;
       }
 
       pre {
-        background-color: #f8f8f8;
-        padding: 10px;
+        background-color: #111;
+        color: green;
+        padding: 1px 12px;
         overflow-x: auto;
       }
 
       code {
-        color: #111;
+        font-size: 1.1em;
+        color: green;
+      }
+
+      section {
+        width: 98%;
+        margin: 0 auto;
+        padding: 10px;
+      }
+
+      summary {
+        outline: 1px solid;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      summary::after {
+        font-family: "Font Awesome 5 Free";
+        content: "\f078";
+        float: right;
+        margin-inline: 30px;
+        transition: transform 0.2s ease-in-out;
+        font-weight: bold;
+      }
+      details[open] summary::after {
+        font-family: "Font Awesome 5 Free";
+        content: "\f00d";
+        transform: rotate(180deg);
+        color: red;
+      }
+      details[open] {
+        box-shadow: 0 0 3px 1px #999;
+        border-radius: 5px;
       }
     </style>
   </head>
   <body>
-    <h1>Ensinamentos JavaScript</h1>
-
-    <h2>Variáveis</h2>
-    <p>
-      Variáveis são usadas para armazenar dados em JavaScript. Elas podem ser
-      declaradas usando a palavra-chave let, const ou var e atribuídas a um
-      valor..
-    </p>
-    <p>Exemplo:</p>
-    <pre>
-    <code>
+    <main>
+      <h1>Ensinamentos JavaScript</h1>
+      <section>
+        <details>
+          <summary><strong>Variáveis em JavaScript?</strong></summary>
+          <section>
+          <h3>O que são variáveis em JavaScript?</h3>
+            <p>
+              Em JavaScript, as variáveis são usadas para armazenar valores. Você
+              pode atribuir diferentes tipos de dados a uma variável, como
+              números, strings, booleanos, objetos, arrays e muito mais.
+            </p>
+            <h3>Palavras-chave para declarar variáveis</h3>
+            <p>
+              Em JavaScript, existem três palavras-chave para declarar variáveis:
+            </p>
+            <ul>
+              <li>
+                <strong>var</strong>: era a maneira antiga de declarar variáveis
+                em JavaScript.
+              </li>
+              <li>
+                <strong>let</strong>: usado para declarar variáveis que podem ser
+                alteradas posteriormente.
+              </li>
+              <li>
+                <strong>const</strong>: usado para declarar variáveis com valores
+                constantes, que não podem ser alterados.
+              </li>
+            </ul>
+            <h3>Exemplos de declaração de variáveis</h3>
+            <pre><code>
 let idade = 25;
-const nome = "João";
-    </code>
-  </pre>
-    <p>
-      Ao trabalhar com variáveis, é importante entender os diferentes tipos de
-      dados (números, strings, booleanos, etc.) e como eles podem ser usados no
-      código. Além disso, seguir convenções de nomenclatura adequadas (usando
-      nomes descritivos e camelCase, por exemplo) ajuda a tornar o código mais
-      legível e compreensível.
-    </p>
+let nome = "João";
+const PI = 3.14;
+            </code></pre>
+            <p>
+              Ao declarar uma variável, é uma boa prática atribuir um nome
+              descritivo a ela. Os nomes de variáveis em JavaScript podem conter
+              letras, números, sublinhados (_) e cifrões ($), mas devem começar
+              com uma letra. Além disso, o JavaScript diferencia maiúsculas de
+              minúsculas, portanto, idade e Idade são considerados nomes de
+              variáveis diferentes.
+            </p>
+            <h3>Utilizando variáveis em expressões</h3>
+            <pre><code>
+let a = 10;
+let b = 5;
+let soma = a + b;
+                  
+let c = a > b;
+            </code></pre>
+            <h3>Escopo das variáveis</h3>
+            <p>
+              As variáveis têm escopo, o que significa que elas podem ser
+              acessadas apenas dentro do bloco em que foram declaradas. Variáveis
+              declaradas com <code>var</code> têm escopo de função, enquanto
+              aquelas declaradas com <code>let</code> ou <code>const</code> têm
+              escopo de bloco.
+            </p>
+          </section>
+        </details>
+      </section>
+    </main>
 
     <h2>Operadores</h2>
     <p>
