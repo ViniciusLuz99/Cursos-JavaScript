@@ -86,6 +86,11 @@
         box-shadow: 0 0 3px 1px #999;
         border-radius: 5px;
       }
+
+      article {
+        margin: 10px;
+        border-bottom: 1px solid gray;
+      }
     </style>
   </head>
   <body>
@@ -95,70 +100,151 @@
         <details>
           <summary><strong>Variáveis em JavaScript?</strong></summary>
           <section>
-          <h3>O que são variáveis em JavaScript?</h3>
-            <p>
-              Em JavaScript, as variáveis são usadas para armazenar valores. Você
-              pode atribuir diferentes tipos de dados a uma variável, como
-              números, strings, booleanos, objetos, arrays e muito mais.
-            </p>
-            <h3>Palavras-chave para declarar variáveis</h3>
-            <p>
-              Em JavaScript, existem três palavras-chave para declarar variáveis:
-            </p>
-            <ul>
-              <li>
-                <strong>var</strong>: era a maneira antiga de declarar variáveis
-                em JavaScript.
-              </li>
-              <li>
-                <strong>let</strong>: usado para declarar variáveis que podem ser
-                alteradas posteriormente.
-              </li>
-              <li>
-                <strong>const</strong>: usado para declarar variáveis com valores
-                constantes, que não podem ser alterados.
-              </li>
-            </ul>
-            <h3>Exemplos de declaração de variáveis</h3>
-            <pre><code>
+            <article>
+              <h3>O que são variáveis em JavaScript?</h3>
+              <p>
+                Em JavaScript, as variáveis são usadas para armazenar valores.
+                Você pode atribuir diferentes tipos de dados a uma variável,
+                como números, strings, booleanos, objetos, arrays e muito mais.
+              </p>
+            </article>
+            <article>
+              <h3>Palavras-chave para declarar variáveis</h3>
+              <p>
+                Em JavaScript, existem três palavras-chave para declarar
+                variáveis:
+              </p>
+              <ul>
+                <li>
+                  <strong>var</strong>: era a maneira antiga de declarar
+                  variáveis em JavaScript.
+                </li>
+                <li>
+                  <strong>let</strong>: usado para declarar variáveis que podem
+                  ser alteradas posteriormente.
+                </li>
+                <li>
+                  <strong>const</strong>: usado para declarar variáveis com
+                  valores constantes, que não podem ser alterados.
+                </li>
+              </ul>
+            </article>
+            <article>
+              <h3>Exemplos de declaração de variáveis</h3>
+              <pre><code>
 let idade = 25;
 let nome = "João";
 const PI = 3.14;
-            </code></pre>
-            <p>
-              Ao declarar uma variável, é uma boa prática atribuir um nome
-              descritivo a ela. Os nomes de variáveis em JavaScript podem conter
-              letras, números, sublinhados (_) e cifrões ($), mas devem começar
-              com uma letra. Além disso, o JavaScript diferencia maiúsculas de
-              minúsculas, portanto, idade e Idade são considerados nomes de
-              variáveis diferentes.
-            </p>
-            <h3>Utilizando variáveis em expressões</h3>
-            <pre><code>
+              </code></pre>
+              <p>
+                Ao declarar uma variável, é uma boa prática atribuir um nome
+                descritivo a ela. Os nomes de variáveis em JavaScript podem
+                conter letras, números, sublinhados (_) e cifrões ($), mas devem
+                começar com uma letra. Além disso, o JavaScript diferencia
+                maiúsculas de minúsculas, portanto, idade e Idade são
+                considerados nomes de variáveis diferentes.
+              </p>
+            </article>
+            <article>
+              <h3>Utilizando variáveis em expressões</h3>
+              <pre><code>
 let a = 10;
 let b = 5;
-let soma = a + b;
-                  
+let soma = a + b
 let c = a > b;
-            </code></pre>
-            <h3>Escopo das variáveis</h3>
-            <p>
-              As variáveis têm escopo, o que significa que elas podem ser
-              acessadas apenas dentro do bloco em que foram declaradas. Variáveis
-              declaradas com <code>var</code> têm escopo de função, enquanto
-              aquelas declaradas com <code>let</code> ou <code>const</code> têm
-              escopo de bloco.
-            </p>
+              </code></pre>
+            </article>
+            <article>
+              <h3>Escopo das variáveis</h3>
+              <p>
+                As variáveis têm escopo, o que significa que elas podem ser
+                acessadas apenas dentro do bloco em que foram declaradas.<br>
+                Variáveis declaradas com <code>var</code> têm escopo de função,
+                enquanto aquelas declaradas com <code>let</code> ou
+                <code>const</code> têm escopo de bloco.
+              </p>
+            </article>
+          </section>
+        </details>
+      </section>
+      <section>
+        <details>
+          <summary><strong>Operadores</strong></summary>
+          <section>
+            <article>
+              <h3>Oque são operadores?</h3>
+              <p>
+                Operadores são símbolos especiais que realizam operações em
+                valores. Eles podem ser aritméticos, de atribuição, de
+                comparação ou lógicos.
+              </p>
+            </article>
+            <article>
+              <h3>Operadores Aritméticos</h3>
+              <p>
+                Os operadores aritméticos realizam operações matemáticas em
+                valores numéricos.
+              </p>
+              <pre>
+                  <code>
+let resultado = 10 + 5; // Soma: resultado é igual a 15
+let resultado = 10 - 5; // Subtração: resultado é igual a 5
+let resultado = 10 * 5; // Multiplicação: resultado é igual a 50
+let resultado = 10 / 5; // Divisão: resultado é igual a 2
+let resultado = 10 % 3; // Resto: resultado é igual a 1 (resto de 10 dividido por 3)
+                  </code>
+                </pre>
+            </article>
+            <article>
+              <h3>Operadores de Atribuição</h3>
+              <p>
+                Os operadores de atribuição são utilizados para atribuir valores
+                a variáveis e realizar operações junto com a atribuição.
+              </p>
+              <pre>
+                  <code>
+let numero = 5; // Atribuição simples
+numero += 5; // Atribuição com operação: resultado será 10 (5 + 5)
+                  </code>
+                </pre>
+            </article>
+            <article>
+              <h3>Operadores de Comparação</h3>
+              <p>
+                Os operadores de comparação comparam valores e retornam um valor
+                booleano (true ou false).
+              </p>
+              <pre>
+                <code>
+console.log(5 == '5'); // Igual: true, pois ambos são iguais numericamente
+console.log(5 != 10); // Não igual: true, pois 5 não é igual a 10
+console.log(5 === '5'); // Estritamente igual: false, pois são de tipos diferentes (número e string)
+console.log(5 !== '5'); // Estritamente não igual: true, pois são de tipos diferentes (número e string)
+console.log(10 > 5); // Maior que: true, pois 10 é maior que 5
+                </code>
+              </pre>
+            </article>
+            <article>
+              <h3>Operadores Lógicos</h3>
+              <p>
+                Os operadores lógicos são usados para combinar ou inverter
+                valores booleanos.
+              </p>
+              <pre>
+                <code>
+console.log(true && false); // E lógico: false, pois ambas as expressões não são verdadeiras
+console.log(true || false); // Ou lógico: true, pois pelo menos uma das expressões é verdadeira
+console.log(!true); // Não lógico: false, pois inverteu o valor true para false
+                </code>
+              </pre>
+            </article>
           </section>
         </details>
       </section>
     </main>
 
     <h2>Operadores</h2>
-    <p>
-      Operadores são símbolos especiais que realizam operações em valores. Eles
-      podem ser aritméticos, de atribuição, de comparação ou lógicos.
-    </p>
+
     <p>Exemplo:</p>
     <pre>
     <code>
