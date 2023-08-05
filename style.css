@@ -10,12 +10,19 @@ body {
   width: 100%;
 }
 
-h1 {
-  text-align: center;
+header {
   width: 100%;
   background-color: #111;
+}
+
+h1 {
+  text-align: center;
   padding: 20px;
+  width: 100%;
   margin-bottom: 30px;
+}
+h1 span img{
+  max-height: 2rem;
 }
 
 h2,

@@ -13,8 +13,10 @@
     />
   </head>
   <body>
+    <header>
+      <h1>Resumos JavaScript <span><img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt=""></span></h1>
+    </header>
     <main>
-      <h1>Ensinamentos JavaScript</h1>
       <section>
         <details>
           <summary><strong>Variáveis em JavaScript?</strong></summary>
@@ -262,6 +264,172 @@ console.log(mensagem); // Resultado: "Maior de idade" (se idade for maior ou igu
           </section>
         </details>
       </section>
+      <section>
+        <details>
+          <summary><strong>Funções</strong></summary>
+          <section>
+            <article>
+              <h3>O que são funções?</h3>
+              <p>
+                As funções são blocos de código que agrupam tarefas específicas
+                em um único lugar. Elas nos permitem reutilizar esse código
+                várias vezes sem precisar repeti-lo.
+              </p>
+            </article>
+            <article>
+              <h3>Sintaxe básica de uma função:</h3>
+              <pre>
+                <code>
+function nomeDaFuncao() {
+// Bloco de código da função
+// Aqui você escreve as ações que a função irá executar
+}
+                </code>
+              </pre>
+            </article>
+            <article>
+              <h3>Exemplo de função que exibe uma mensagem:</h3>
+              <pre>
+                <code>
+function saudacao() {
+  console.log("Olá!");
+}
+
+// Chamando a função para exibir a mensagem
+saudacao(); // Saída: Olá!
+                </code>
+              </pre>
+            </article>
+            <article>
+              <h3>Funções com parâmetros:</h3>
+              <p>
+                As funções podem receber valores, chamados de parâmetros, que
+                serão usados dentro do bloco de código.
+              </p>
+              <pre>
+                <code>
+function saudacao(nome) {
+  console.log(`Olá, ${nome}!`);
+}
+
+// Chamando a função com um valor específico para o parâmetro
+saudacao("Link"); // Saída: Olá, Link!
+                </code>
+              </pre>
+            </article>
+            <article>
+              <h3>Funções com retorno:</h3>
+              <p>
+                As funções também podem retornar valores para serem utilizados
+                fora da função.
+              </p>
+              <pre>
+                <code>
+function personagemPrincipal(jogo) {
+  if (jogo === "Super Mario") {
+    return "Mario";
+  } else if (jogo === "The Legend of Zelda") {
+    return "Link";
+  } else {
+    return "Personagem não identificado";
+  }
+}
+// Chamando a função e atribuindo o resultado a uma variável
+let personagem = personagemPrincipal("The Legend of Zelda");
+console.log(personagem); // Saída: Link
+                </code>
+              </pre>
+            </article>
+            <article>
+              <h3>Arrow Functions (Funções de seta)</h3>
+              <p>
+                As Arrow Functions são uma forma mais concisa de escrever
+                funções em JavaScript. Elas são especialmente úteis quando
+                precisamos de funções curtas e diretas.
+              </p>
+              <p>Vantagens das Arrow Functions:</p>
+              <ul>
+                <li>Sintaxe mais curta e simplificada;</li>
+                <li>
+                  O valor de "this" é herdado do contexto em que a Arrow
+                  Function foi definida;
+                </li>
+                <li>Torna o código mais enxuto e legível.</li>
+              </ul>
+              <pre>
+    <code>
+// Função tradicional para verificar a quantidade de moedas do Mario
+function verificarMoedas(moedas) {
+  if (moedas >= 100) {
+    console.log("Você coletou muitas moedas! Parabéns!");
+  } else {
+    console.log("Continue coletando moedas para aumentar sua pontuação!");
+  }
+}
+
+// Com Arrow Function, podemos simplificar o código
+let verificarMoedas = (moedas) => {
+  if (moedas >= 100) {
+    console.log("Você coletou muitas moedas! Parabéns!");
+  } else {
+    console.log("Continue coletando moedas para aumentar sua pontuação!");
+  }
+};
+
+// Chamando a função com um valor de moedas para o Mario
+verificarMoedas(120);
+    </code>
+            </pre>
+              <p>
+                As Arrow Functions são uma ferramenta poderosa que nos permite
+                escrever código mais enxuto e legível. Elas são amplamente
+                utilizadas em programação moderna e podem trazer mais eficiência
+                e clareza ao nosso código.
+              </p>
+            </article>
+
+            <article>
+              <h3>Funções anônimas (Anonymous Functions)</h3>
+              <p>
+                As funções anônimas, também conhecidas como "Anonymous
+                Functions" em inglês, são funções que não possuem um nome
+                definido. Elas são usadas quando não precisamos reutilizar a
+                função em outras partes do código, ou quando queremos escrever
+                uma função de forma mais concisa.
+              </p>
+              <p>Existem duas formas de criar funções anônimas:</p>
+              <p>1. Expressão de função anônima</p>
+              <pre>
+                <code>
+// Criando uma função anônima e atribuindo-a a uma variável
+let saudacao = function(nome) {
+  return `Olá, ${nome}!`;
+};
+
+// Chamando a função
+console.log(saudacao("Samus")); // Saída: Olá, Samus!
+                </code>
+              </pre>
+              <p>2. Arrow Function (Função de seta)</p>
+              <pre>
+                <code>
+// Arrow function com um único parâmetro
+let saudacao = (nome) => {
+  return `Olá, ${nome}!`;
+};
+
+// Quando a função possui apenas uma linha de código, podemos omitir as chaves e o "return"
+// O valor retornado é implícito
+let saudacao = (nome) => `Olá, ${nome}!`;
+
+// Chamando a função
+console.log(saudacao("Samus")); // Saída: Olá, Samus!
+                </code>
+              </pre>
+            </article>
+          </section>
+        </details>
+      </section>
     </main>
 
     <h2>Estruturas de repetição:</h2>
@@ -299,30 +467,6 @@ do {
       executar um bloco de código várias vezes. Certifique-se de definir as
       condições corretas para evitar loops infinitos e garantir que o código
       seja executado o número correto de vezes.
-    </p>
-
-    <h2>Funções:</h2>
-    <p>
-      As funções são blocos de código reutilizáveis que podem receber
-      argumentos, executar uma série de instruções e retornar um valor. Elas são
-      usadas para organizar o código e facilitar a reutilização.
-    </p>
-    <p>Exemplo:</p>
-    <pre>
-    <code>
-function saudacao(nome) {
-  return "Olá, " + nome + "!";
-}
-
-let mensagem = saudacao("João");
-console.log(mensagem); // Output: Olá, João!
-    </code>
-  </pre>
-    <p>
-      Ensinamento: Ao trabalhar com funções, é importante entender como
-      declará-las, passar argumentos, retornar valores e considerar o escopo de
-      variáveis. Funções podem ajudar a tornar o código mais modular e facilitar
-      a manutenção.
     </p>
 
     <h2>Arrays:</h2>
