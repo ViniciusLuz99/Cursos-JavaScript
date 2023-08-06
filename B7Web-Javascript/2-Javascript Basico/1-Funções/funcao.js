@@ -22,4 +22,19 @@ function nomeCompleto(nome, sobrenome) {
 
 nomeCompleto("Bonieky", "Lacertda"); //não esta sendo armazenada
 let completo = nomeCompleto("Bonieky", "Lacertda"); //agora sim esta sendo armazenada e tem um valor sendo retornado
-console.log(completo)
+console.log(completo);
+
+//Função com retorno condicional
+
+// Uma função só pode ter 1 return
+// Aqui ele esta dentro de uma condicional, ou vai ter true ou o false neste case
+function maiorDeIdade(idade) {
+  if (idade >= 18) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+let verificacao = maiorDeIdade(14); //false
+console.log(verificacao)
