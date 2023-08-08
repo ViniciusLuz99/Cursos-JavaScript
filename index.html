@@ -574,6 +574,107 @@ frutas.forEach(function(fruta) {
       <section>
         <details>
           <summary>
+            <strong>Objetos</strong>
+          </summary>
+          <section>
+            <article>
+              <h3>Introdução aos Objetos:</h3>
+              <p>
+                Em JavaScript, os objetos são estruturas que nos permitem
+                armazenar e organizar dados relacionados. Eles são como caixas
+                que podem conter várias informações juntas. Vamos imaginar um
+                objeto como um baú mágico que guarda diferentes tesouros.
+              </p>
+              <pre><code></code></pre>
+            </article>
+            <article>
+              <h3>Exemplo do Objeto "Jogador":</h3>
+              <p>
+                Imagine que estamos criando um jogo de aventura com um jogador.
+                Vamos definir um objeto chamado "jogador" que terá algumas
+                propriedades, como nome, nível e pontos.
+              </p>
+              <pre><code>
+const jogador = {
+  nome: "Aventureiro",
+  nivel: 5,
+  pontos: 200
+};
+    </code></pre>
+              <p>
+                Podemos acessar as propriedades do objeto usando a notação de
+                ponto. É como abrir o baú e ver o que está dentro.
+              </p>
+              <pre><code>
+console.log(jogador.nome); // Saída: "Aventureiro"
+console.log(jogador.nivel); // Saída: 5
+console.log(jogador.pontos); // Saída: 200
+              </code></pre>
+            </article>
+            <article>
+              <h3>Arrays dentro de Objetos:</h3>
+              <p>
+                Arrays são listas de itens em JavaScript. Podemos colocar um
+                array dentro de um objeto para representar itens que o jogador
+                possui.
+              </p>
+              <pre><code>
+const jogador = {
+  nome: "Aventureiro",
+  nivel: 5,
+  pontos: 200,
+  itens: ["espada", "escudo", "poção de cura"]
+};
+              </code></pre>
+              <p>
+                Vamos abrir o baú "itens" e ver quais equipamentos o jogador
+                possui.
+              </p>
+              <pre><code>
+console.log(jogador.itens[0]); // Saída: "espada"
+console.log(jogador.itens[1]); // Saída: "escudo"
+console.log(jogador.itens[2]); // Saída: "poção de cura"
+              </code></pre>
+            </article>
+            <article>
+              <h3>Funções dentro de Objetos:</h3>
+              <p>
+                Além das propriedades, podemos adicionar funções ao objeto.
+                Essas funções são chamadas de métodos do objeto.
+              </p>
+              <p>
+                No entanto, é importante evitar o uso de Arrow Functions para definir métodos, pois o "this" dentro de uma Arrow Function não se refere ao próprio objeto em que ela está sendo utilizada."
+              </p>
+              <p>
+                "O "this" é uma referência especial em JavaScript que se refere ao objeto em que a função está sendo executada. No caso dos métodos de objetos, o "this" aponta para o próprio objeto que contém o método
+              </p>
+              <pre><code>
+const jogador = {
+  nome: "Aventureiro",
+  nivel: 5,
+  pontos: 200,
+  itens: ["espada", "escudo", "poção de cura"],
+  atacarMonstro: function(monstro) {
+    console.log(this.nome + " atacou o monstro " + monstro + "!");
+  }
+};
+             </code></pre>
+              <p>
+                Agora, vamos chamar o método "atacarMonstro" e ver o jogador em
+                ação!
+              </p>
+              <pre><code>
+jogador.atacarMonstro("Dragão"); 
+// Saída: "Aventureiro atacou o monstro Dragão!"
+              </code></pre>
+            </article>
+          </section>
+        </details>
+      </section>
+      <!---->
+      <section>
+        <details>
+          <summary>
             <strong>Test</strong>
           </summary>
           <section>
