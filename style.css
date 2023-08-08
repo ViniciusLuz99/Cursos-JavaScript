@@ -81,7 +81,7 @@ details[open] summary::after {
 }
 details[open] {
   outline: 1px solid #99999936;
-  border-bottom: 1px solid #008000;
+  border-bottom: 2px solid #008000;
   box-shadow: 0px 0px 10px #131313d8;
   border-radius: 5px;
 }
