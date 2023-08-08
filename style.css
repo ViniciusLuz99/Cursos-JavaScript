@@ -1,10 +1,21 @@
+:root {
+  --background-color: #222;
+  --text-color: #e0e0e0;
+  --heading-color: #111;
+  --code-background: #111;
+  --code-color: green;
+  --box-shadow-color: #13131360;
+  --accent-color: #008000;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
 }
+
 body {
-  background-color: #222;
-  color: #e0e0e0;
+  background-color: var(--background-color);
+  color: var(--text-color);
   font-family: Arial, sans-serif;
   padding: 10px;
   width: 100%;
@@ -12,7 +23,7 @@ body {
 
 header {
   width: 100%;
-  background-color: #111;
+  background-color: var(--heading-color);
 }
 
 h1 {
@@ -39,17 +50,17 @@ p {
 }
 
 pre {
-  background-color: #111;
-  color: green;
+  background-color: var(--code-background);
+  color: var(--code-color);
   padding: 1px 12px;
   border-radius: 5px;
   overflow-x: auto;
-  box-shadow: 2px 5px 5px #13131360;
+  box-shadow: 2px 5px 5px var(--box-shadow-color);
 }
 
 code {
   font-size: 1.2em;
-  color: green;
+  color: var(--code-color);
 }
 
 section {
@@ -60,7 +71,7 @@ section {
 }
 
 summary {
-  box-shadow: 8px 12px 5px #1313137a;
+  box-shadow: 8px 12px 5px var(--box-shadow-color);
   outline: 1px solid;
   border-radius: 5px;
   cursor: pointer;
@@ -80,13 +91,13 @@ details[open] summary::after {
   color: red;
 }
 details[open] {
-  outline: 1px solid #99999936;
-  border-bottom: 2px solid #008000;
-  box-shadow: 0px 0px 10px #131313d8;
+  outline: 1px solid var(--box-shadow-color);
+  border-bottom: 2px solid var(--accent-color);
+  box-shadow: 0px 0px 10px var(--box-shadow-color);
   border-radius: 5px;
 }
 details[open] summary {
-  box-shadow: 0px 0px 10px green;
+  box-shadow: 0px 0px 10px var(--accent-color);
 }
 
 article {
@@ -114,7 +125,7 @@ details article {
 
 details[open] article {
   max-height: 5000px !important;
-  /*Ajusteaalturamáximadesejada*/
+  /* Ajuste a altura máxima desejada */
   opacity: 1 !important;
   transition: 1s ease-in !important;
   -webkit-transition: 1s ease-in !important;

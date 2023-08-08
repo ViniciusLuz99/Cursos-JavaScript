@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Js</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="https://cdn-icons-png.flaticon.com/512/5968/5968292.png"
+      type="image/x-icon"
+    />
     <!-- Link para o Font Awesome -->
     <link
       rel="stylesheet"
@@ -644,10 +648,15 @@ console.log(jogador.itens[2]); // Saída: "poção de cura"
                 Essas funções são chamadas de métodos do objeto.
               </p>
               <p>
-                No entanto, é importante evitar o uso de Arrow Functions para definir métodos, pois o "this" dentro de uma Arrow Function não se refere ao próprio objeto em que ela está sendo utilizada."
+                No entanto, é importante evitar o uso de Arrow Functions para
+                definir métodos, pois o "this" dentro de uma Arrow Function não
+                se refere ao próprio objeto em que ela está sendo utilizada."
               </p>
               <p>
-                "O "this" é uma referência especial em JavaScript que se refere ao objeto em que a função está sendo executada. No caso dos métodos de objetos, o "this" aponta para o próprio objeto que contém o método
+                "O "this" é uma referência especial em JavaScript que se refere
+                ao objeto em que a função está sendo executada. No caso dos
+                métodos de objetos, o "this" aponta para o próprio objeto que
+                contém o método
               </p>
               <pre><code>
 const jogador = {
@@ -676,6 +685,98 @@ jogador.atacarMonstro("Dragão");
       <section>
         <details>
           <summary>
+            <strong>Loops</strong>
+          </summary>
+          <section>
+            <article>
+              <h3>For Loop:</h3>
+              <p>
+                O loop <code>for</code> é usado quando sabemos exatamente
+                quantas vezes queremos repetir um bloco de código.
+              </p>
+              <pre>
+      <code>
+for (let i = 0; i < 5; i++) {
+  console.log(i); // Output: 0, 1, 2, 3, 4
+}
+      </code>
+    </pre>
+            </article>
+
+            <article>
+              <h3>While Loop:</h3>
+              <p>
+                O loop <code>while</code> é usado quando queremos repetir um
+                bloco de código enquanto uma condição for verdadeira.
+              </p>
+              <pre>
+      <code>
+let count = 0;
+while (count < 5) {
+  console.log(count); // Output: 0, 1, 2, 3, 4
+  count++;
+}
+      </code>
+    </pre>
+            </article>
+
+            <article>
+              <h3>Do-While Loop:</h3>
+              <p>
+                O loop <code>do-while</code> é semelhante ao <code>while</code>,
+                mas garante que o bloco de código seja executado pelo menos uma
+                vez, mesmo se a condição inicial for falsa.
+              </p>
+              <pre>
+      <code>
+let num = 5;
+do {
+  console.log(num); // Output: 5 (executa pelo menos uma vez)
+  num++;
+} while (num < 5);
+      </code>
+    </pre>
+            </article>
+
+            <article>
+              <h3>For...of Loop:</h3>
+              <p>
+                O loop <code>for...of</code> é usado para iterar sobre elementos
+                de um objeto iterável (como arrays e strings).
+              </p>
+              <pre>
+      <code>
+const colors = ['red', 'green', 'blue'];
+for (const color of colors) {
+  console.log(color); // Output: 'red', 'green', 'blue'
+}
+      </code>
+    </pre>
+            </article>
+
+            <article>
+              <h3>For...in Loop:</h3>
+              <p>
+                O loop <code>for...in</code> é usado para iterar sobre
+                propriedades de um objeto.
+              </p>
+              <pre>
+      <code>
+const person = { name: 'Alice', age: 30, job: 'engineer' };
+for (const key in person) {
+  console.log(`${key}: ${person[key]}`);
+  // Output: 'name: Alice', 'age: 30', 'job: engineer'
+}
+      </code>
+    </pre>
+            </article>
+          </section>
+        </details>
+      </section>
+      <!---->
+      <section>
+        <details>
+          <summary>
             <strong>Test</strong>
           </summary>
           <section>
@@ -691,6 +792,7 @@ jogador.atacarMonstro("Dragão");
           </section>
         </details>
       </section>
+      <!---->
     </main>
   </body>
 </html>
