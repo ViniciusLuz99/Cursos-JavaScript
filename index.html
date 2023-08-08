@@ -14,7 +14,14 @@
   </head>
   <body>
     <header>
-      <h1>Resumos JavaScript <span><img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt=""></span></h1>
+      <h1>
+        Resumos JavaScript
+        <span
+          ><img
+            src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png"
+            alt=""
+        /></span>
+      </h1>
     </header>
     <main>
       <section>
@@ -88,6 +95,7 @@ let c = a > b;
           </section>
         </details>
       </section>
+      <!---->
       <section>
         <details>
           <summary><strong>Operadores</strong></summary>
@@ -162,6 +170,7 @@ console.log(!true); // Não lógico: false, pois inverteu o valor true para fals
           </section>
         </details>
       </section>
+      <!---->
       <section>
         <details>
           <summary><strong>Estruturas Condicionais</strong></summary>
@@ -264,6 +273,7 @@ console.log(mensagem); // Resultado: "Maior de idade" (se idade for maior ou igu
           </section>
         </details>
       </section>
+      <!---->
       <section>
         <details>
           <summary><strong>Funções</strong></summary>
@@ -430,89 +440,155 @@ console.log(saudacao("Samus")); // Saída: Olá, Samus!
           </section>
         </details>
       </section>
+      <!---->
+      <section>
+        <details>
+          <summary>
+            <strong>Arrays</strong>
+          </summary>
+          <section>
+            <article>
+              <h3>O que é um array?</h3>
+              <p>
+                Um array é uma lista ordenada de elementos em JavaScript. Cada
+                elemento em um array tem uma posição chamada índice, que começa
+                em 0. Os arrays podem armazenar diferentes tipos de dados, como
+                números, strings e objetos.
+              </p>
+            </article>
+            <article>
+              <h3>Criando um array</h3>
+              <p>
+                Para criar um array, utilizamos colchetes [] e separamos os
+                elementos por vírgula.
+              </p>
+              <pre>
+    <code>
+const frutas = ['maçã', 'banana', 'laranja'];
+    </code>
+  </pre>
+            </article>
+            <article>
+              <h3>Acessando elementos</h3>
+              <p>
+                Podemos acessar elementos de um array utilizando seu índice
+                entre colchetes.
+              </p>
+              <pre>
+    <code>
+const frutas = ['maçã', 'banana', 'laranja'];
+console.log(frutas[0]); // Saída: 'maçã'
+console.log(frutas[1]); // Saída: 'banana'
+console.log(frutas[2]); // Saída: 'laranja'
+    </code>
+  </pre>
+            </article>
+            <article>
+              <h3>Alterando elementos</h3>
+              <p>
+                Para alterar um elemento em um array, basta atribuir um novo
+                valor ao índice desejado.
+              </p>
+              <pre>
+    <code>
+const frutas = ['maçã', 'banana', 'laranja'];
+frutas[1] = 'morango';
+console.log(frutas); // Saída: ['maçã', 'morango', 'laranja']
+    </code>
+  </pre>
+            </article>
+            <article>
+              <h3>Tamanho do array</h3>
+              <p>
+                Para saber quantos elementos há em um array, usamos a
+                propriedade length.
+              </p>
+              <pre>
+    <code>
+const frutas = ['maçã', 'banana', 'laranja'];
+console.log(frutas.length); // Saída: 3
+    </code>
+  </pre>
+            </article>
+            <article>
+              <h3>Adicionando elementos</h3>
+              <p>
+                Podemos adicionar elementos ao final do array utilizando o
+                método push().
+              </p>
+              <pre>
+    <code>
+const frutas = ['maçã', 'banana'];
+frutas.push('laranja');
+console.log(frutas); // Saída: ['maçã', 'banana', 'laranja']
+    </code>
+  </pre>
+            </article>
+            <article>
+              <h3>Removendo elementos</h3>
+              <p>
+                Podemos remover elementos do final do array utilizando o método
+                pop().
+              </p>
+              <pre>
+    <code>
+const frutas = ['maçã', 'banana', 'laranja'];
+frutas.pop();
+console.log(frutas); // Saída: ['maçã', 'banana']
+    </code>
+  </pre>
+            </article>
+            <article>
+              <h3>Percorrendo um array</h3>
+              <p>
+                Podemos percorrer os elementos de um array usando um loop, como
+                o for ou o forEach().
+              </p>
+              <pre>
+    <code>
+const frutas = ['maçã', 'banana', 'laranja'];
+for (let i = 0; i < frutas.length; i++) {
+  console.log(frutas[i]);
+}
+    </code>
+  </pre>
+            </article>
+            <article>
+              <h3>Exemplo com forEach()</h3>
+              <p>
+                Outra forma de percorrer um array é usando o método forEach().
+              </p>
+              <pre>
+    <code>
+const frutas = ['maçã', 'banana', 'laranja'];
+frutas.forEach(function(fruta) {
+  console.log(fruta);
+});
+    </code>
+  </pre>
+            </article>
+          </section>
+        </details>
+      </section>
+      <!---->
+      <section>
+        <details>
+          <summary>
+            <strong>Test</strong>
+          </summary>
+          <section>
+            <article>
+              <h3></h3>
+              <p></p>
+              <pre>
+                <code>
+
+                </code>
+              </pre>
+            </article>
+          </section>
+        </details>
+      </section>
     </main>
-
-    <h2>Estruturas de repetição:</h2>
-    <p>
-      As estruturas de repetição permitem que você execute um bloco de código
-      várias vezes. A declaração <code>for</code> é usada quando você sabe
-      exatamente quantas vezes deseja repetir o código. A declaração
-      <code>while</code> é usada quando você deseja repetir o código enquanto
-      uma condição for verdadeira. A declaração <code>do...while</code> é
-      semelhante ao <code>while</code>, mas garante que o código seja executado
-      pelo menos uma vez.
-    </p>
-    <p>Exemplo:</p>
-    <pre>
-    <code>
-for (let i = 0; i < 5; i++) {
-  console.log(i);
-}
-
-let contador = 0;
-while (contador < 5) {
-  console.log(contador);
-  contador++;
-}
-
-let valor = 5;
-do {
-  console.log(valor);
-  valor--;
-} while (valor > 0);
-    </code>
-  </pre>
-    <p>
-      Ensinamento: As estruturas de repetição são úteis quando você precisa
-      executar um bloco de código várias vezes. Certifique-se de definir as
-      condições corretas para evitar loops infinitos e garantir que o código
-      seja executado o número correto de vezes.
-    </p>
-
-    <h2>Arrays:</h2>
-    <p>
-      Arrays são estruturas de dados que permitem armazenar e acessar vários
-      valores em uma única variável. Os elementos de um array são indexados
-      numericamente, começando em 0.
-    </p>
-    <p>Exemplo:</p>
-    <pre>
-    <code>
-let numeros = [1, 2, 3, 4, 5];
-console.log(numeros[2]); // Output: 3
-
-numeros.push(6);
-console.log(numeros); // Output: [1, 2, 3, 4, 5, 6]
-    </code>
-  </pre>
-    <p>
-      Ensinamento: Arrays são úteis para armazenar coleções de valores
-      relacionados. Aprenda a criar, acessar e modificar elementos em um array,
-      além de usar métodos embutidos para manipulá-los.
-    </p>
-
-    <h2>Objetos:</h2>
-    <p>
-      Objetos são estruturas de dados que permitem armazenar propriedades e
-      métodos relacionados em uma única variável. Cada propriedade é composta
-      por uma chave e um valor associado.
-    </p>
-    <p>Exemplo:</p>
-    <pre>
-    <code>
-let pessoa = {
-  nome: "João",
-  idade: 30,
-  profissao: "Desenvolvedor"
-};
-
-console.log(pessoa.nome); // Output: João
-    </code>
-  </pre>
-    <p>
-      Ensinamento: Objetos são úteis para representar entidades complexas com
-      propriedades e comportamentos. Aprenda a criar objetos, acessar e
-      modificar propriedades, e entender o conceito de referência em objetos.
-    </p>
   </body>
 </html>
