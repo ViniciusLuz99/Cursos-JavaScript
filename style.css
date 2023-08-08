@@ -44,6 +44,7 @@ pre {
   padding: 1px 12px;
   border-radius: 5px;
   overflow-x: auto;
+  box-shadow: 2px 5px 5px #13131360;
 }
 
 code {
@@ -59,6 +60,7 @@ section {
 }
 
 summary {
+  box-shadow: 8px 12px 5px #1313137a;
   outline: 1px solid;
   border-radius: 5px;
   cursor: pointer;
@@ -79,11 +81,44 @@ details[open] summary::after {
 }
 details[open] {
   outline: 1px solid #99999936;
-  box-shadow: 0 0 3px 1px #99999936;
+  border-bottom: 1px solid #008000;
+  box-shadow: 0px 0px 10px #131313d8;
   border-radius: 5px;
+}
+details[open] summary {
+  box-shadow: 0px 0px 10px green;
 }
 
 article {
   margin: 10px;
   border-bottom: 1px solid gray;
+  transition: 1s ease-in;
+  max-height: 0 !important;
+  -webkit-transition: 1s ease-in;
+  -moz-transition: 1s ease-in;
+  -ms-transition: 1s ease-in;
+  -o-transition: 1s ease-in;
+}
+
+/* Conteúdo da seção com animação */
+details:not([open]) article,
+details article {
+  max-height: 0 !important;
+  opacity: 0 !important;
+  transition: 1s ease-in !important;
+  -webkit-transition: 1s ease-in !important;
+  -moz-transition: 1s ease-in !important;
+  -ms-transition: 1s ease-in !important;
+  -o-transition: 1s ease-in !important;
+}
+
+details[open] article {
+  max-height: 5000px !important;
+  /*Ajusteaalturamáximadesejada*/
+  opacity: 1 !important;
+  transition: 1s ease-in !important;
+  -webkit-transition: 1s ease-in !important;
+  -moz-transition: 1s ease-in !important;
+  -ms-transition: 1s ease-in !important;
+  -o-transition: 1s ease-in !important;
 }
