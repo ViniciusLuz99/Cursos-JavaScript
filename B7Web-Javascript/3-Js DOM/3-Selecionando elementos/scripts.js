@@ -1,0 +1,1 @@
+let elementos = document.getElementsByName("h1")
