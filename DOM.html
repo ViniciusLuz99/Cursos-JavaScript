@@ -38,6 +38,171 @@
       </nav>
     </header>
     <main>
+      <section class="topic" id="dom-summary">
+        <details>
+          <summary>
+            <strong>DOM(Document Object Model)</strong>
+          </summary>
+          <section>
+            <article>
+              <h3>O que é o DOM:</h3>
+              <p>
+                Modelo de representação hierárquica de documentos HTML/XML.
+                Permite manipular a estrutura e conteúdo de páginas web.
+              </p>
+            </article>
+            <article>
+              <h3>Árvore DOM:</h3>
+              <p>
+                Organiza elementos da página em uma árvore. Cada elemento é um
+                "nó" no DOM.
+              </p>
+            </article>
+            <article>
+              <h3>Acesso a Elementos:</h3>
+              <ul>
+                <li>
+                  <p>
+                    <code>document.querySelector</code> para selecionar
+                    elementos por seletor CSS.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <code>document.getElementById</code> para selecionar por ID.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <code>document.getElementsByClassName</code> para selecionar
+                    por classe.
+                  </p>
+                </li>
+              </ul>
+              <pre>
+                        <code>
+const elemento = document.querySelector("#meuElemento");
+elemento.textContent = "Novo conteúdo";
+                        </code>
+                    </pre>
+            </article>
+            <article>
+              <h3>Manipulação de Conteúdo:</h3>
+              <p>
+                Mudar texto: <code>elemento.textContent = "Novo texto"</code>.
+              </p>
+              <p>
+                Mudar HTML interno:
+                <code
+                  >elemento.innerHTML = "&lt;p&gt;Novo
+                  parágrafo&lt;/p&gt;"</code
+                >.
+              </p>
+              <pre>
+                        <code>
+const elemento = document.querySelector("#meuElemento");
+elemento.innerHTML = "&lt;p&gt;Novo parágrafo&lt;/p&gt;";
+                        </code>
+                    </pre>
+            </article>
+            <article>
+              <h3>Manipulação de Atributos:</h3>
+              <p>
+                Mudar atributos:
+                <code>elemento.setAttribute("atributo", "valor")</code>
+              </p>
+              <p>
+                Obter valor de atributo:
+                <code>elemento.getAttribute("atributo")</code>.
+              </p>
+              <pre>
+                        <code>
+const elemento = document.querySelector("#meuElemento");
+elemento.setAttribute("data-id", "123");
+const valor = elemento.getAttribute("data-id");
+console.log(valor); // Saída: "123"
+                        </code>
+                    </pre>
+            </article>
+            <article>
+              <h3>Eventos:</h3>
+              <p>
+                Adicionar eventos:
+                <code>elemento.addEventListener("evento", função)</code>.
+              </p>
+              <pre>
+                        <code>
+const botao = document.querySelector("#meuBotao");
+botao.addEventListener("click", () => {
+    console.log("Botão clicado!");
+});
+                        </code>
+                    </pre>
+            </article>
+            <article>
+              <h3>Criação de Elementos:</h3>
+              <p>Criar elemento: <code>document.createElement("tag")</code>.</p>
+              <p>
+                Adicionar ao DOM:
+                <code>elementoPai.appendChild(novoElemento)</code>.
+              </p>
+              <pre>
+                        <code>
+const novoParagrafo = document.createElement("p");
+novoParagrafo.textContent = "Novo parágrafo criado!";
+const elementoPai = document.querySelector("#meuElementoPai");
+elementoPai.appendChild(novoParagrafo);
+                        </code>
+                    </pre>
+            </article>
+            <article>
+              <h3>Remoção de Elementos:</h3>
+              <p>
+                Remover elemento:
+                <code>elementoPai.removeChild(elementoFilho)</code>.
+              </p>
+              <pre>
+                        <code>
+const elementoPai = document.querySelector("#meuElementoPai");
+const elementoFilho = document.querySelector("#meuElementoFilho");
+elementoPai.removeChild(elementoFilho);
+                        </code>
+                    </pre>
+            </article>
+            <article>
+              <h3>Navegação no DOM:</h3>
+              <p>
+                Acessar elementos pai: <code>elemento.parentNode</code>. Acessar
+                elementos filhos: <code>elemento.childNodes</code>. Acessar
+                próximo elemento irmão: <code>elemento.nextSibling</code>.
+                Acessar elemento irmão anterior:
+                <code>elemento.previousSibling</code>.
+              </p>
+              <pre>
+                        <code>
+const filho = document.querySelector("#filho");
+const pai = filho.parentNode;
+const proximoIrmão = filho.nextSibling;
+const irmãoAnterior = filho.previousSibling;
+                        </code>
+                    </pre>
+            </article>
+            <article>
+              <h3>Modificação de Estilos:</h3>
+              <p>
+                Mudar estilo: <code>elemento.style.propriedade = "valor"</code>.
+              </p>
+              <pre>
+                        <code>
+const elemento = document.querySelector("#meuElemento");
+elemento.style.color = "blue";
+                        </code>
+                    </pre>
+            </article>
+          </section>
+        </details>
+      </section>
+      <!---->
       <section class="topic" id="placeholder">
         <details>
           <summary>
@@ -49,7 +214,6 @@
               <p></p>
               <pre>
                 <code>
-
                 </code>
               </pre>
             </article>
