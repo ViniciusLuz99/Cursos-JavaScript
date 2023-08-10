@@ -203,6 +203,109 @@ elemento.style.color = "blue";
         </details>
       </section>
       <!---->
+      <section class="topic" id="dom-Select-elements">
+        <details>
+          <summary>
+            <strong>Selecionar Elementos no DOM</strong>
+          </summary>
+          <section>
+            <article>
+              <h3>Seleção com querySelector</h3>
+              <p>
+                <code>document.querySelector</code> Permite selecionar um
+                elemento usando um seletor CSS. Retorna o primeiro elemento
+                encontrado que corresponde ao seletor. Útil para seleções
+                específicas e únicas.
+              </p>
+              <pre>
+            <code>
+// Exemplo:
+const elemento = document.querySelector("#idDoElemento");
+            </code>
+        </pre>
+            </article>
+
+            <article>
+              <h3>Seleção querySelectorALL:</h3>
+              <p>
+                <code>document.querySelectorAll</code> Seleciona todos os
+                elementos que correspondem ao seletor CSS. Retorna uma lista de
+                elementos (NodeList). Permite iterar sobre os elementos
+                selecionados. Útil quando há vários elementos correspondentes.
+              </p>
+              <pre>
+            <code>
+// Exemplo:
+const elementos = document.querySelectorAll(".classeDoElemento");
+elementos.forEach(elemento => {
+    // Faça algo com cada elemento
+});
+            </code>
+        </pre>
+            </article>
+
+            <article>
+              <h3>
+                Seleção com <code>document.getElementById</code> e
+                <code>document.getElementsByClassName</code>:
+              </h3>
+              <p>
+                <code>document.getElementById</code> seleciona um elemento por
+                ID único.
+              </p>
+              <p>
+                <code>document.getElementsByClassName</code> seleciona elementos
+                por classe.
+              </p>
+              <p>
+                Ambos retornam o próprio elemento ou uma coleção de elementos
+                (HTMLCollection). Menos flexíveis, mas ainda úteis em certos
+                casos.
+              </p>
+              <pre>
+            <code>
+// Exemplos:
+const elementoPorId = document.getElementById("idDoElemento");
+const elementosPorClasse = document.getElementsByClassName("classeDoElemento");
+            </code>
+        </pre>
+            </article>
+
+            <article>
+              <h3>Dicas Adicionais:</h3>
+              <ul>
+                <li>Use IDs para seleção rápida de elementos únicos.</li>
+                <li>
+                  Use classes para selecionar grupos de elementos com o mesmo
+                  estilo/comportamento.
+                </li>
+                <li>
+                  Use <code>querySelector</code> e
+                  <code>querySelectorAll</code> para seleções flexíveis e
+                  poderosas.
+                </li>
+              </ul>
+            </article>
+
+            <article>
+              <h3>Exercício Prático:</h3>
+              <p>
+                Vamos supor que você deseja alterar o texto de um parágrafo com
+                o ID "meuParagrafo" para "Olá, Mundo!". Use
+                <code>document.querySelector</code> para realizar essa tarefa.
+              </p>
+              <pre>
+            <code>
+// Seleciona o elemento por ID e muda o texto
+const paragrafo = document.querySelector("#meuParagrafo");
+paragrafo.textContent = "Olá, Mundo!";
+            </code>
+        </pre>
+            </article>
+          </section>
+        </details>
+      </section>
+      <!---->
       <section class="topic" id="placeholder">
         <details>
           <summary>

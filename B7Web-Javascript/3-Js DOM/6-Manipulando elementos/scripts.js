@@ -15,3 +15,5 @@ const clicou = () => {
   ul.children[0].append("(Adicionado no final do texto)");
   //append so funciona para texto
 };
+
+
