@@ -16,6 +16,20 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <style>
+      button {
+        color: var(--topicText-color);
+        font-weight: bold;
+        text-decoration: none;
+        padding: 10px;
+        margin: 5px;
+        background-color: var(--topic-color);
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px var(--box-shadow-color);
+        transition: 0.3s ease-in-out;
+        border: 1px solid;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -212,30 +226,28 @@ elemento.style.color = "blue";
             <article>
               <h3>Seleção com querySelector</h3>
               <p>
-                <code>document.querySelector</code> Permite selecionar um
-                elemento usando um seletor CSS. Retorna o primeiro elemento
-                encontrado que corresponde ao seletor. Útil para seleções
-                específicas e únicas.
+                <span class="highlight">document.querySelector</span> Permite
+                selecionar um elemento usando um seletor CSS. Retorna o primeiro
+                elemento encontrado que corresponde ao seletor. Útil para
+                seleções específicas e únicas.
               </p>
               <pre>
             <code>
-// Exemplo:
 const elemento = document.querySelector("#idDoElemento");
             </code>
         </pre>
             </article>
-
             <article>
               <h3>Seleção querySelectorALL:</h3>
               <p>
-                <code>document.querySelectorAll</code> Seleciona todos os
-                elementos que correspondem ao seletor CSS. Retorna uma lista de
-                elementos (NodeList). Permite iterar sobre os elementos
-                selecionados. Útil quando há vários elementos correspondentes.
+                <span class="highlight">document.querySelectorAll</span>
+                Seleciona todos os elementos que correspondem ao seletor CSS.
+                Retorna uma lista de elementos (NodeList). Permite iterar sobre
+                os elementos selecionados. Útil quando há vários elementos
+                correspondentes.
               </p>
               <pre>
             <code>
-// Exemplo:
 const elementos = document.querySelectorAll(".classeDoElemento");
 elementos.forEach(elemento => {
     // Faça algo com cada elemento
@@ -243,19 +255,15 @@ elementos.forEach(elemento => {
             </code>
         </pre>
             </article>
-
             <article>
-              <h3>
-                Seleção com <code>document.getElementById</code> e
-                <code>document.getElementsByClassName</code>:
-              </h3>
+              <h3>Seleção com getElementById e getElementsByClassName:</h3>
               <p>
-                <code>document.getElementById</code> seleciona um elemento por
-                ID único.
+                <span class="highlight">document.getElementById</span> seleciona
+                um elemento por ID único.
               </p>
               <p>
-                <code>document.getElementsByClassName</code> seleciona elementos
-                por classe.
+                <span class="highlight">document.getElementsByClassName</span>
+                seleciona elementos por classe.
               </p>
               <p>
                 Ambos retornam o próprio elemento ou uma coleção de elementos
@@ -264,13 +272,11 @@ elementos.forEach(elemento => {
               </p>
               <pre>
             <code>
-// Exemplos:
 const elementoPorId = document.getElementById("idDoElemento");
 const elementosPorClasse = document.getElementsByClassName("classeDoElemento");
             </code>
         </pre>
             </article>
-
             <article>
               <h3>Dicas Adicionais:</h3>
               <ul>
@@ -280,13 +286,12 @@ const elementosPorClasse = document.getElementsByClassName("classeDoElemento");
                   estilo/comportamento.
                 </li>
                 <li>
-                  Use <code>querySelector</code> e
-                  <code>querySelectorAll</code> para seleções flexíveis e
-                  poderosas.
+                  <span class="highlight">querySelector</span> e
+                  <span class="highlight">querySelectorAll</span> para seleções
+                  flexíveis e poderosas.
                 </li>
               </ul>
             </article>
-
             <article>
               <h3>Exercício Prático:</h3>
               <p>
@@ -301,6 +306,164 @@ const paragrafo = document.querySelector("#meuParagrafo");
 paragrafo.textContent = "Olá, Mundo!";
             </code>
         </pre>
+            </article>
+          </section>
+        </details>
+      </section>
+      <!---->
+      <section class="topic" id="Clique-DOM">
+        <details>
+          <summary>
+            <strong>Eventos de Clique DOM</strong>
+          </summary>
+          <section>
+            <article>
+              <h3>Eventos no DOM</h3>
+              <p>
+                Eventos no Document Object Model (DOM) permitem que você crie
+                interatividade em páginas web, respondendo a ações do usuário,
+                como cliques, pressionamentos de teclas, passagem do mouse,
+                entre outros. Vamos explorar os conceitos-chave:
+              </p>
+              <ul>
+                <li>
+                  <p>
+                    <strong>O que são eventos:</strong> Eventos são ações que
+                    ocorrem no navegador enquanto o usuário interage com uma
+                    página. Eles podem ser acionados por ações do usuário ou
+                    pelo próprio navegador (ex: carregamento da página).
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Selecionando elementos:</strong> Para trabalhar com
+                    eventos, primeiro, selecione o elemento HTML ao qual deseja
+                    adicionar um evento. Você pode usar métodos como
+                    getElementById, querySelector, ou selecionar diretamente por
+                    nome de tag, classe ou outros atributos.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Adicionando um Event Listener:</strong> Use o método
+                    addEventListener para registrar um "ouvinte de evento" no
+                    elemento selecionado. Esse ouvinte aguardará o evento
+                    especificado e executará uma função quando o evento ocorrer.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Função do Evento:</strong> A função do evento é o
+                    código que será executado quando o evento acontecer. Essa
+                    função pode realizar ações específicas, alterar o conteúdo
+                    da página, modificar estilos, interagir com APIs, etc..
+                  </p>
+                </li>
+              </ul>
+            </article>
+            <article>
+              <h3>Eventos de Clique no DOM</h3>
+              <p>
+                Os eventos de clique são uma parte fundamental da interatividade
+                em páginas da web. Eles permitem que você execute ações quando
+                um elemento HTML é clicado pelo usuário.
+              </p>
+              <button id="meuBotao">Clique Aqui</button>
+              <pre>
+                <code>
+// Exemplo de evento de clique
+const botao = document.getElementById("meuBotao");
+botao.addEventListener("click", () => {
+  alert("Você clicou no botão!");
+  botao.innerText = "Clicado";
+  botao.style.backgroundColor = "white";
+});
+                </code>
+              </pre>
+            </article>
+          </section>
+        </details>
+      </section>
+      <!---->
+      <section class="topic" id="placeholder">
+        <details>
+          <summary>
+            <strong>Manipulação do DOM</strong>
+          </summary>
+          <section>
+            <article>
+              <h3>Criar um novo elemento:</h3>
+              <p>
+                Para adicionar um novo elemento ao DOM, use
+                <span class="highlight">document.createElement</span> e
+                configure o conteúdo com
+                <span class="highlight">innerText</span>.
+              </p>
+              <button id="botaoCriarElemento">Criar Novo Elemento</button>
+              <div id="novoElementoContainer"></div>
+              <pre><code>
+const novoElemento = document.createElement("div");
+novoElemento.innerText = "Novo elemento criado!";
+document.body.appendChild(novoElemento);
+              </code></pre>
+            </article>
+            <article>
+              <h3>Modificar conteúdo:</h3>
+              <p>
+                Modifique o conteúdo de um elemento existente usando a
+                propriedade <span class="highlight">innerText</span>.
+              </p>
+              <button id="botaoModificarConteudo">Modificar Conteúdo</button>
+              <p id="meu-elemento">Area de testes</p>
+              <pre><code>
+const elemento = document.getElementById("meu-elemento");
+elemento.innerText = "Novo conteúdo!";
+              </code></pre>
+            </article>
+            <article>
+              <h3>Modificar conteúdo usando <code>innerHTML</code>:</h3>
+              <p>
+                Use <span class="highlight">innerHTML</span> para definir
+                conteúdo HTML dentro de um elemento, incluindo tags HTML.
+              </p>
+              <p>
+                Cuidado com os riscos de segurança associados. pois pode expor
+                seu aplicativo a ataques de injeção de código (XSS).
+                Certifique-se de que o conteúdo seja seguro
+              </p>
+              <button id="botaoModificarHTML">Modificar Conteúdo HTML</button>
+              <div id="elemento-com-html"><p>Area de testes</p></div>
+              <pre><code>
+const meuElementoComHTML = document.getElementById("elemento-com-html");
+meuElementoComHTML.innerHTML = "<strong>Texto em negrito</strong>";
+              </code></pre>
+            </article>
+            <article>
+              <h3>
+                Diferença entre <span class="highlight">textContent</span> e
+                <span class="highlight">innerText</span>:
+              </h3>
+              <p>
+                <span class="highlight">textContent</span>Retorna o conteúdo de
+                texto "puro" do elemento, sem considerar estilos CSS.
+              </p>
+              <p>
+                <span class="highlight">innerText</span> Retorna o conteúdo de
+                texto visível do elemento, respeitando estilos CSS, como cores e
+                ocultação.
+              </p>
+            </article>
+            <article>
+              <h3><code>outerHTML</code>:</h3>
+              <p>
+                A propriedade <span class="highlight">outerHTML</span> retorna o
+                próprio elemento e seu conteúdo em forma de string, incluindo a
+                tag do elemento.
+              </p>
+              <pre><code>
+const meuElemento = document.getElementById("meu-elemento");
+console.log(meuElemento.outerHTML)
+              </code></pre>
             </article>
           </section>
         </details>
@@ -325,5 +488,42 @@ paragrafo.textContent = "Olá, Mundo!";
       </section>
       <!---->
     </main>
+    <script>
+      //botão
+      const botao = document.getElementById("meuBotao");
+      botao.addEventListener("click", () => {
+        alert("Você clicou no botão!");
+        botao.innerText = "Clicado";
+        botao.style.backgroundColor = "white";
+      });
+      //
+      // Evento de clique para criar um novo elemento
+      document
+        .getElementById("botaoCriarElemento")
+        .addEventListener("click", function () {
+          const novoElemento = document.createElement("div");
+          novoElemento.innerText = "Novo elemento criado!";
+          document
+            .getElementById("novoElementoContainer")
+            .appendChild(novoElemento);
+        });
+
+      // Evento de clique para modificar o conteúdo de um elemento
+      document
+        .getElementById("botaoModificarConteudo")
+        .addEventListener("click", function () {
+          const elemento = document.getElementById("meu-elemento");
+          elemento.innerText = "Novo conteúdo!";
+        });
+
+      // Evento de clique para modificar o conteúdo usando innerHTML
+      document
+        .getElementById("botaoModificarHTML")
+        .addEventListener("click", function () {
+          const meuElementoComHTML =
+            document.getElementById("elemento-com-html");
+          meuElementoComHTML.innerHTML = "<strong>Texto em negrito</strong>";
+        });
+    </script>
   </body>
 </html>

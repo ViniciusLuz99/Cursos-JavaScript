@@ -61,7 +61,8 @@ h1 span img {
 .navbar ul li {
   transition: 0.3s ease-in-out;
 }
-.navbar ul li a {
+.navbar ul li a,
+#meuBotao {
   color: var(--topicText-color);
   font-weight: bold;
   text-decoration: none;
@@ -69,13 +70,14 @@ h1 span img {
   background-color: var(--topic-color);
   border-radius: 5px;
   box-shadow: 1px 1px 5px var(--box-shadow-color);
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
-.navbar ul li:hover {
+.navbar ul li:hover,
+#meuBotao:hover {
   text-decoration: none;
   color: var(--text-color);
   transform: scale(1.05) translate(0, -5px);
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 main {
@@ -146,6 +148,10 @@ pre {
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
+}
+
+.highlight {
+  text-decoration: underline;
 }
 
 code {
