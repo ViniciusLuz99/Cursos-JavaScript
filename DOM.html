@@ -421,7 +421,10 @@ elemento.innerText = "Novo conteúdo!";
               </code></pre>
             </article>
             <article>
-              <h3>Modificar conteúdo usando <code>innerHTML</code>:</h3>
+              <h3>
+                Modificar conteúdo usando
+                <span class="highlight">innerHTML</span>:
+              </h3>
               <p>
                 Use <span class="highlight">innerHTML</span> para definir
                 conteúdo HTML dentro de um elemento, incluindo tags HTML.
@@ -437,6 +440,60 @@ elemento.innerText = "Novo conteúdo!";
 const meuElementoComHTML = document.getElementById("elemento-com-html");
 meuElementoComHTML.innerHTML = "<strong>Texto em negrito</strong>";
               </code></pre>
+            </article>
+            <article id="articleAppend">
+              <h3>Adicionar Novo Elemento Usando <span>appendChild</span></h3>
+              <p>
+                Usado para colocar algo no final de uma lista. Imagine uma
+                lista, e você quer adicionar um item no final.<br />
+                Sintaxe: elementoPai.appendChild(novoElementoFilho);
+                Exemplo: Colocar um texto<br />
+              </p>
+              <button id="btnAppend">Append</button>
+              <pre><code>// Criar um novo elemento
+const novoElemento = document.createElement("article");
+novoElemento.innerText = "Novo elemento criado!";
+
+// Adicionar o novo elemento como último filho do article atual
+document.getElementById("articleAppend").appendChild(novoElemento);
+    </code></pre>
+            </article>
+
+            <article id="articlePrepend">
+              <h3>Adicionar Novo Elemento no Iníci Usando <span>prepend</span></h3>
+              <p>
+                Usado para colocar algo no início de uma lista. Imagine uma
+                lista, e você quer adicionar um item no começo.<br />
+                Sintaxe: elementoPai.prepend(novoElementoFilho);
+              </p>
+              <button id="btnPrepend">Prepend</button>
+              <pre><code>// Criar um novo elemento
+const novoElemento = document.createElement("article");
+novoElemento.innerText = "Novo elemento criado no início!";
+
+// Adicionar o novo elemento como primeiro filho do article atual
+document.getElementById("articlePrepend").prepend(novoElemento);
+    </code></pre>
+            </article>
+
+            <article>
+              <h3>Remover Elemento</h3>
+              <p>
+                O método remove é usado para remover um elemento do DOM
+                (Document Object Model) em JavaScript. Ele é uma forma simples e
+                direta de remover um nó (elemento) do seu contexto.<br />
+                Sintaxe: elementoRemovido.remove();
+              </p>
+              <button id="btnRemove">Remove</button>
+              <pre><code>// Remover um elemento
+const elementoParaRemover = document.getElementById("elementoParaRemover");
+elementoParaRemover.remove();
+    </code></pre>
+              <div id="elementoParaRemover">
+                <p>
+                  Este elemento pode ser removido clicando no botão "Remove".
+                </p>
+              </div>
             </article>
             <article>
               <h3>
@@ -478,6 +535,7 @@ console.log(meuElemento.outerHTML)
             <article>
               <h3></h3>
               <p></p>
+              <button></button>
               <pre>
                 <code>
                 </code>
@@ -524,6 +582,42 @@ console.log(meuElemento.outerHTML)
             document.getElementById("elemento-com-html");
           meuElementoComHTML.innerHTML = "<strong>Texto em negrito</strong>";
         });
+      // Função para adicionar um novo elemento ao final do article atual
+      function adicionarElemento() {
+        const novoElemento = document.createElement("article");
+        novoElemento.innerText = "Novo elemento criado!";
+        document.getElementById("articleAppend").appendChild(novoElemento);
+      }
+
+      // Função para adicionar um novo elemento no início do article atual
+      function adicionarElementoNoInicio() {
+        const novoElemento = document.createElement("article");
+        novoElemento.innerText = "Novo elemento criado no início!";
+        document.getElementById("articlePrepend").prepend(novoElemento);
+      }
+
+      // Função para remover o elemento do article atual
+      function removerElemento() {
+        const elementoParaRemover = document.getElementById(
+          "elementoParaRemover"
+        );
+        elementoParaRemover.remove();
+      }
+
+      // Evento de clique para adicionar elemento ao final
+      document
+        .getElementById("btnAppend")
+        .addEventListener("click", adicionarElemento);
+
+      // Evento de clique para adicionar elemento no início
+      document
+        .getElementById("btnPrepend")
+        .addEventListener("click", adicionarElementoNoInicio);
+
+      // Evento de clique para remover elemento
+      document
+        .getElementById("btnRemove")
+        .addEventListener("click", removerElemento);
     </script>
   </body>
 </html>
