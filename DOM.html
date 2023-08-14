@@ -446,8 +446,8 @@ meuElementoComHTML.innerHTML = "<strong>Texto em negrito</strong>";
               <p>
                 Usado para colocar algo no final de uma lista. Imagine uma
                 lista, e você quer adicionar um item no final.<br />
-                Sintaxe: elementoPai.appendChild(novoElementoFilho);
-                Exemplo: Colocar um texto<br />
+                Sintaxe: elementoPai.appendChild(novoElementoFilho); Exemplo:
+                Colocar um texto<br />
               </p>
               <button id="btnAppend">Append</button>
               <pre><code>// Criar um novo elemento
@@ -460,7 +460,9 @@ document.getElementById("articleAppend").appendChild(novoElemento);
             </article>
 
             <article id="articlePrepend">
-              <h3>Adicionar Novo Elemento no Iníci Usando <span>prepend</span></h3>
+              <h3>
+                Adicionar Novo Elemento no Iníci Usando <span>prepend</span>
+              </h3>
               <p>
                 Usado para colocar algo no início de uma lista. Imagine uma
                 lista, e você quer adicionar um item no começo.<br />
@@ -494,6 +496,48 @@ elementoParaRemover.remove();
                   Este elemento pode ser removido clicando no botão "Remove".
                 </p>
               </div>
+            </article>
+            <article>
+              <h3>
+                Adicionar elementos com
+                <span class="highlight">.after()</span> e
+                <span class="highlight">.before()</span>
+              </h3>
+              <p>
+                O método .before() insere conteúdo antes do elemento
+                selecionado.
+              </p>
+              <pre>
+                <code>
+// Criando um novo item
+const newItem = document.createElement('li');
+newItem.innerText = 'Novo Item';
+
+// Selecionando o primeiro item existente na lista
+const firstItem = document.querySelector('li');
+
+// Inserindo o novo item antes do primeiro item existente
+firstItem.before(newItem);
+                </code>
+              </pre>
+              <hr />
+              <p>
+                O método .after() insere conteúdo depois do elemento
+                selecionado.
+              </p>
+              <pre>
+                <code>
+// Criando um novo item
+const newParagraph = document.createElement('p');
+newParagraph.innerText = 'Novo parágrafo';
+
+// Selecionando o primeiro item existente
+const existingParagraph = document.querySelector('p');
+
+// Inserindo o novo item depois do primeiro item existente
+existingParagraph.after(newParagraph);
+                </code>
+              </pre>
             </article>
             <article>
               <h3>
