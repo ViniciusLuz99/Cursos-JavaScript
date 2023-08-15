@@ -657,6 +657,35 @@ div.classList.add('destaque');
 div.classList.remove('antigo');
 </code>
               </pre>
+              <hr />
+              <p>
+                Para alternar um classe use<br />
+                <span class="highlight">classList.toggle("className")</span
+                ><br />
+                utilizado para alternar a presença de uma classe em um elemento.
+                Se a classe estiver presente, ela será removida; caso contrário,
+                será adicionada.
+              </p>
+              <pre>
+<code>
+div.classList.toggle('classe-azul');
+// Se 'classe-azul' estiver presente, remove; caso contrário, adiciona
+</code>
+              </pre>
+              <hr />
+              <p>
+                Para subistituir uma classe use<br />
+                <span class="highlight"
+                  >classList.replace(oldClass, newClass)</span
+                ><br />
+                Este método substitui uma classe existente por outra.
+              </p>
+              <pre>
+<code>
+div.classList.replace('antigo', 'novo'); // Substitui 'antigo' por 'novo'
+a
+</code>
+              </pre>
             </article>
             <article>
               <h3>Estilos Inline</h3>
