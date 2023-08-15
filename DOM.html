@@ -660,14 +660,16 @@ div.classList.remove('antigo');
             </article>
             <article>
               <h3>Estilos Inline</h3>
-              <p>
+              <p id="paragraph">
                 Acesse e modifique estilos inline usando a propriedade<br />
                 <span class="highlight">element.style.</span>
               </p>
+              <button id="inlineStyle">Mudar Estilo</button>
               <pre>
 <code>
 const paragraph = document.querySelector('p');
-paragraph.style.color = 'blue';
+paragraph.style.backgroundColor = "white";
+paragraph.style.color = "blue";
 </code>
               </pre>
             </article>
@@ -696,5 +698,6 @@ paragraph.style.color = 'blue';
       <!---->
     </main>
     <script src="manipulacaoDom.js"></script>
+    <script src="atributosDom.js"></script>
   </body>
 </html>
