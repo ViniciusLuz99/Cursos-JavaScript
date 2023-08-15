@@ -311,7 +311,7 @@ paragrafo.textContent = "Olá, Mundo!";
         </details>
       </section>
       <!---->
-      <section class="topic" id="Clique-DOM">
+      <section class="topic" id="clique-DOM">
         <details>
           <summary>
             <strong>Eventos de Clique DOM</strong>
@@ -385,10 +385,10 @@ botao.addEventListener("click", () => {
         </details>
       </section>
       <!---->
-      <section class="topic" id="placeholder">
+      <section class="topic" id="manipulacao-DOM">
         <details>
           <summary>
-            <strong>Manipulação do DOM</strong>
+            <strong>Manipulação de elementos DOM</strong>
           </summary>
           <section>
             <article>
@@ -570,6 +570,111 @@ console.log(meuElemento.outerHTML)
         </details>
       </section>
       <!---->
+      <section class="topic" id="atributos-DOM">
+        <details>
+          <summary>
+            <strong>Manipulação de atributos DOM</strong>
+          </summary>
+          <section>
+            <article>
+              <h3>Acessando Atributos</h3>
+              <p>
+                Para obter o valor de um atributo, use<br />
+                <span class="highlight"
+                  >element.getAttribute('nomeDoAtributo')</span
+                >
+              </p>
+              <pre>
+                <code>
+const link = document.querySelector('a');
+const hrefValue = link.getAttribute('href');
+                </code>
+              </pre>
+            </article>
+            <article>
+              <h3>Definindo Atributos</h3>
+              <p>
+                para definir ou atualizar o valor de um atributo em um elemento.
+                use<br />
+                <span class="highlight"
+                  >element.setAttribute('nomeDoAtributo', 'valor')</span
+                >
+              </p>
+              <pre>
+                <code>
+const image = document.querySelector('img');
+image.setAttribute('alt', 'Descrição da imagem');
+                </code>
+              </pre>
+            </article>
+            <article>
+              <h3>Removendo Atributos</h3>
+              <p>
+                Para remover um atributo de um elemento, Use<br />
+                <span class="highlight"
+                  >element.removeAttribute('nomeDoAtributo')</span
+                >
+              </p>
+              <pre>
+<code>
+const input = document.querySelector('input');
+input.removeAttribute('disabled');
+</code>
+              </pre>
+            </article>
+            <article>
+              <h3>Verificação de Atributos</h3>
+              <p>
+                Para verificar se um elemento possui um atributo especifico,
+                Use<br />
+                <span class="highlight"
+                  >element.hasAttribute('nomeDoAtributo')</span
+                >
+              </p>
+              <pre>
+<code>
+const button = document.querySelector('button');
+const hasAttribute = button.hasAttribute('disabled');
+</code>
+              </pre>
+            </article>
+            <article>
+              <h3>Manipular classes de CSS</h3>
+              <p>
+                Para manipular classes de um elemento, Para adicionar use<br />
+                <span class="highlight"
+                  >element.classList.add('nomeDaClasse')</span
+                ><br />
+                ou, Para remover use<br />
+                <span class="highlight"
+                  >element.classList.remove('nomeDaClasse')</span
+                >
+              </p>
+              <pre>
+<code>
+const div = document.querySelector('div');
+div.classList.add('destaque');
+div.classList.remove('antigo');
+</code>
+              </pre>
+            </article>
+            <article>
+              <h3>Estilos Inline</h3>
+              <p>
+                Acesse e modifique estilos inline usando a propriedade<br />
+                <span class="highlight">element.style.</span>
+              </p>
+              <pre>
+<code>
+const paragraph = document.querySelector('p');
+paragraph.style.color = 'blue';
+</code>
+              </pre>
+            </article>
+          </section>
+        </details>
+      </section>
+      <!---->
       <section class="topic" id="placeholder">
         <details>
           <summary>
@@ -590,78 +695,6 @@ console.log(meuElemento.outerHTML)
       </section>
       <!---->
     </main>
-    <script>
-      //botão
-      const botao = document.getElementById("meuBotao");
-      botao.addEventListener("click", () => {
-        alert("Você clicou no botão!");
-        botao.innerText = "Clicado";
-        botao.style.backgroundColor = "white";
-      });
-      //
-      // Evento de clique para criar um novo elemento
-      document
-        .getElementById("botaoCriarElemento")
-        .addEventListener("click", function () {
-          const novoElemento = document.createElement("div");
-          novoElemento.innerText = "Novo elemento criado!";
-          document
-            .getElementById("novoElementoContainer")
-            .appendChild(novoElemento);
-        });
-
-      // Evento de clique para modificar o conteúdo de um elemento
-      document
-        .getElementById("botaoModificarConteudo")
-        .addEventListener("click", function () {
-          const elemento = document.getElementById("meu-elemento");
-          elemento.innerText = "Novo conteúdo!";
-        });
-
-      // Evento de clique para modificar o conteúdo usando innerHTML
-      document
-        .getElementById("botaoModificarHTML")
-        .addEventListener("click", function () {
-          const meuElementoComHTML =
-            document.getElementById("elemento-com-html");
-          meuElementoComHTML.innerHTML = "<strong>Texto em negrito</strong>";
-        });
-      // Função para adicionar um novo elemento ao final do article atual
-      function adicionarElemento() {
-        const novoElemento = document.createElement("article");
-        novoElemento.innerText = "Novo elemento criado!";
-        document.getElementById("articleAppend").appendChild(novoElemento);
-      }
-
-      // Função para adicionar um novo elemento no início do article atual
-      function adicionarElementoNoInicio() {
-        const novoElemento = document.createElement("article");
-        novoElemento.innerText = "Novo elemento criado no início!";
-        document.getElementById("articlePrepend").prepend(novoElemento);
-      }
-
-      // Função para remover o elemento do article atual
-      function removerElemento() {
-        const elementoParaRemover = document.getElementById(
-          "elementoParaRemover"
-        );
-        elementoParaRemover.remove();
-      }
-
-      // Evento de clique para adicionar elemento ao final
-      document
-        .getElementById("btnAppend")
-        .addEventListener("click", adicionarElemento);
-
-      // Evento de clique para adicionar elemento no início
-      document
-        .getElementById("btnPrepend")
-        .addEventListener("click", adicionarElementoNoInicio);
-
-      // Evento de clique para remover elemento
-      document
-        .getElementById("btnRemove")
-        .addEventListener("click", removerElemento);
-    </script>
+    <script src="manipulacaoDom.js"></script>
   </body>
 </html>
